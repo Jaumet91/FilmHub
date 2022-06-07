@@ -3,3 +3,4 @@ export { MovieInformation } from './MovieInformation/MovieInformation';
 export { Movies } from './Movies/Movies';
 export { Navbar } from './Navbar/Navbar';
 export { Profile } from './Profile/Profile';
+export { Sidebar } from './Sidebar/Sidebar';
