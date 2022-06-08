@@ -13,6 +13,8 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    camelcase: ['error', { properties: 'never', ignoreDestructuring: true }],
+    semi: ['error', 'always', { omitLastInOneLineBlock: true }],
     'react/function-component-definition': [
       2,
       {

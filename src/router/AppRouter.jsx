@@ -26,7 +26,7 @@ export const AppRouter = () => {
               <Route path="/actors/:id" element={<Actors />} />
               <Route path="/profile/:id" element={<Profile />} />
 
-              <Route path="*" element={<Navigate to="/" replace />} />
+              {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
             </Routes>
           </main>
         </div>
