@@ -29,12 +29,12 @@ export const Navbar = () => {
 
   return (
     <>
-      <AppBar position='fixed'>
+      <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           {isMobile && (
             <IconButton
-              color='inherit'
-              edge='start'
+              color="inherit"
+              edge="start"
               style={{ outline: 'none' }}
               onClick={() => setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
               className={classes.menuButton}
@@ -42,28 +42,28 @@ export const Navbar = () => {
               <Menu />
             </IconButton>
           )}
-          <IconButton color='inherit' sx={{ ml: 1 }} onClick={() => {}}>
+          <IconButton color="inherit" sx={{ ml: 1 }} onClick={() => {}}>
             {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
           </IconButton>
           {!isMobile && 'Search...'}
           <div>
             {!isAuthenticated ? (
-              <Button color='inherit' onClick={() => {}}>
+              <Button color="inherit" onClick={() => {}}>
                 Login &nbsp; <AccountCircle />
               </Button>
             ) : (
               <Button
-                color='inherit'
+                color="inherit"
                 component={Link}
-                to={`/profile/:id`}
+                to="/profile/:id"
                 className={classes.linkButton}
                 onClick={() => {}}
               >
                 {!isMobile && <>My Movies &nbsp;</>}
                 <Avatar
                   style={{ width: 30, height: 30 }}
-                  alt='Profile'
-                  src='https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png'
+                  alt="Profile"
+                  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
                 />
               </Button>
             )}
@@ -75,8 +75,8 @@ export const Navbar = () => {
         <nav className={classes.drawer}>
           {isMobile ? (
             <Drawer
-              variant='temporary'
-              anchor='right'
+              variant="temporary"
+              anchor="right"
               open={mobileOpen}
               onClose={() => setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
               classes={{ paper: classes.drawerPaper }}
@@ -87,7 +87,7 @@ export const Navbar = () => {
           ) : (
             <Drawer
               classes={{ paper: classes.drowerPaper }}
-              variant='permanent'
+              variant="permanent"
               open
             >
               <Sidebar setMobileOpen={setMobileOpen} />

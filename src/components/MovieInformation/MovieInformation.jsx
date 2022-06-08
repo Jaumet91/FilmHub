@@ -1,3 +1,1 @@
-export const MovieInformation = () => {
-  return <h1>Movie Information</h1>;
-};
+export const MovieInformation = () => <h1>Movie Information</h1>;

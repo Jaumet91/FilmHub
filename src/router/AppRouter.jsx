@@ -2,13 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import {
-  Actors,
-  MovieInformation,
-  Movies,
-  Profile,
-  Navbar,
-} from '../components/index';
+import { Navbar } from '../components/Navbar/Navbar';
+import { Actors, MovieInformation, Movies, Profile } from '../components/index';
 
 import useStyles from './styles';
 
@@ -26,12 +21,12 @@ export const AppRouter = () => {
           <main className={classes.content}>
             <div className={classes.toolbar} />
             <Routes>
-              <Route path='/' element={<Movies />} />
-              <Route path='/movie/:id' element={<MovieInformation />} />
-              <Route path='/actors/:id' element={<Actors />} />
-              <Route path='/profile/:id' element={<Profile />} />
+              <Route path="/" element={<Movies />} />
+              <Route path="/movie/:id" element={<MovieInformation />} />
+              <Route path="/actors/:id" element={<Actors />} />
+              <Route path="/profile/:id" element={<Profile />} />
 
-              <Route path='*' element={<Navigate to='/' replace />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
         </div>
