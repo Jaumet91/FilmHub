@@ -1,9 +1,35 @@
+import { useEffect } from 'react';
+import { Typography, Button, Box } from '@mui/material';
+import { useSelector } from 'react-redux';
+import { ExitToApp } from '@mui/icons-material';
+import { userSelector } from '../../features/auth';
 
-// TODO: Get acces to profile name or id from redux state. Display the name
+const favoriteMovies = [];
 
 export const Profile = () => {
-  console.log('Profile');
+  const { user: { id, username } } = useSelector(userSelector);
+
+  const logout = () => {
+    localStorage.clear();
+
+    window.location.href = '/';
+  };
+
   return (
-    <div>Profile</div>
+    <Box>
+      <Box display="flex" justifyContent="space-between">
+        <Typography variant="h4" gutterBottom>My Profle</Typography>
+        <Button color="inherit" onClick={logout}>
+          Logout &nbsp; <ExitToApp />
+        </Button>
+      </Box>
+      {!favoriteMovies.length
+        ? <Typography variant="h5">Add favorites or watchlist some movies to se them here!</Typography>
+        : (
+          <Box>
+            FAVORITE MOVIES // TODO
+          </Box>
+        )}
+    </Box>
   );
 };
