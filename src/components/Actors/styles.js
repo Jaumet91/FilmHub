@@ -5,6 +5,12 @@ export default makeStyles((theme) => ({
     maxWidth: '90%',
     borderRadius: '20px',
     objectFit: 'cover',
-    boxShadow: '0.5em 0.5em 1em',
+    boxShadow:
+      theme.palette.mode === 'light' && '0.5em 1em 1em rgb(64, 64, 70)',
+    [theme.breakpoints.down('lg')]: {
+      display: 'flex',
+      margin: '0 auto',
+      width: '90%',
+    },
   },
 }));

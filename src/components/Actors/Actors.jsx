@@ -1,26 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import {
-  Modal,
-  Typography,
-  Button,
-  ButtonGroup,
-  Grid,
-  Box,
-  CircularProgress,
-  useMediaQuery,
-  Rating,
-} from '@mui/material';
-import {
-  Movie as MovieIcon,
-  Theaters,
-  Language,
-  PlusOne,
-  Favorite,
-  FavoriteBorderOutlined,
-  ArrowBack,
-  Remove,
-} from '@mui/icons-material';
+import { Typography, Button, Grid, Box, CircularProgress } from '@mui/material';
+import { ArrowBack } from '@mui/icons-material';
 
 import useStyles from './styles';
 import {

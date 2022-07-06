@@ -12,8 +12,15 @@ export default makeStyles((theme) => ({
   },
   poster: {
     borderRadius: '20px',
-    boxShadow: '0.5em 1em 1em rgb(64, 64, 70)',
+    boxShadow:
+      theme.palette.mode === 'light' && '0.5em 1em 1em rgb(64, 64, 70)',
     width: '80%',
+    [theme.breakpoints.down('lg')]: {
+      display: 'flex',
+      margin: '0 auto',
+      width: '40%',
+      // height: '350px',
+    },
     [theme.breakpoints.down('md')]: {
       margin: '0 auto',
       width: '50%',
@@ -54,10 +61,11 @@ export default makeStyles((theme) => ({
   },
   buttonsContainer: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     width: '100%',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
+      padding: '10px 0',
     },
   },
   modal: {

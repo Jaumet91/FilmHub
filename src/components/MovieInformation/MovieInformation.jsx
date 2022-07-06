@@ -7,7 +7,6 @@ import {
   Grid,
   Box,
   CircularProgress,
-  useMediaQuery,
   Rating,
 } from '@mui/material';
 import {
@@ -44,7 +43,7 @@ export const MovieInformation = () => {
   const [open, setOpen] = useState(false);
 
   const { data, isFetching, error } = useGetMovieQuery(id);
-  console.log(data);
+
   const { data: favoriteMovies } = useGetListQuery({
     listName: 'favorite/movies',
     accountId: user.id,
@@ -57,8 +56,9 @@ export const MovieInformation = () => {
     sessionId: localStorage.getItem('session_id'),
     page: 1,
   });
-  const { data: recommendations, isFetching: isRecomendationsFetching } =
-    useGetRecommendationsQuery({ movie_id: id });
+  const { data: recommendations } = useGetRecommendationsQuery({
+    movie_id: id,
+  });
 
   const [isMovieFavorited, setIsMovieFavorited] = useState(false);
   const [isMovieWatchlisted, stIsMovieWatchlisted] = useState(false);
@@ -123,12 +123,7 @@ export const MovieInformation = () => {
 
   return (
     <Grid container className={classes.containerSpaceAround}>
-      <Grid
-        item
-        sm={12}
-        lg={4}
-        style={{ display: 'flex', marginBottom: '30px' }}
-      >
+      <Grid item sm={12} lg={4} style={{ marginBottom: '30px' }}>
         <img
           className={classes.poster}
           src={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`}

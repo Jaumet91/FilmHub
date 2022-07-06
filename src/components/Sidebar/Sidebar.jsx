@@ -14,7 +14,7 @@ import { useTheme } from '@mui/styles';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { selectGenreOrCategory } from '../../features/currentGenreOrCategory';
-import { redLogo, blueLogo } from '../../helpers/imgUrl';
+import { redLogo, blueLogo } from '../../assets';
 import { useGetGenresQuery } from '../../services/TMDB';
 import genreIcons from '../../assets/genres';
 import useStyles from './styles';
@@ -34,13 +34,17 @@ export const Sidebar = ({ setMobileOpen }) => {
   const { data, isFetching } = useGetGenresQuery();
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [genreIdOrCategoryName]);
+
   return (
     <>
       <Link to="/" className={classes.imageLink}>
         <img
           className={classes.image}
-          src={theme.palette.mode === 'light' ? redLogo : blueLogo}
-          alt="Flimpire logo"
+          src={theme.palette.mode === 'dark' ? redLogo : blueLogo}
+          alt="FlimHub logo"
         />
       </Link>
       <Divider />
