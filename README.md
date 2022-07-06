@@ -16,7 +16,7 @@ To building the website I've used React with React Router V6 and Redux Toolkit. 
 
 The project implements a Conversational Voice AI Platform called Alan AI.
 
-![](./Alan-AI.png)
+![Voice Assistant location](./alan-ai.png)
 
 You can talk with the voice assistant by clicking the mic button and saying:
 
