@@ -1,3 +1,3 @@
 import { AppRouter } from './router/AppRouter';
 
-export const FilmpireApp = () => <AppRouter />;
+export const FilmHubApp = () => <AppRouter />;

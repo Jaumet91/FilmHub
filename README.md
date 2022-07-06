@@ -1,5 +1,7 @@
 # FilmHub webpage created with Vite & React
 
+Live Site URL: [FilmHub](https://filmhubjcf.netlify.app/)
+
 ## Introduction
 
 This application is part of a course taught by JSM. As an addition to it, I have migrated the application to React Router V6, changed the directory structure, used Vite for building the app and fixed some bugs with the layout.

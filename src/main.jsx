@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import store from './app/store';
 
-import { FilmpireApp } from './FilmpireApp';
+import { FilmHubApp } from './FilmHubApp';
 import ToggleColorModeProvider from './utils/ToggleColorMode';
 import './main.css';
 
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Provider store={store}>
         <ToggleColorModeProvider>
-          <FilmpireApp />
+          <FilmHubApp />
         </ToggleColorModeProvider>
       </Provider>
     </BrowserRouter>
