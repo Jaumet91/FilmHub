@@ -19,17 +19,15 @@ export default makeStyles((theme) => ({
       display: 'flex',
       margin: '0 auto',
       width: '40%',
-      // height: '350px',
     },
     [theme.breakpoints.down('md')]: {
       margin: '0 auto',
       width: '50%',
-      // height: '350px',
     },
     [theme.breakpoints.down('sm')]: {
       margin: '0 auto',
       width: '100%',
-      height: '350px',
+      height: '500px',
       marginBottom: '30px',
     },
   },
